@@ -1,0 +1,133 @@
+:root {
+  --bg: #0f172a;
+  --card: #0b1220;
+  --accent: #3b82f6;
+  --text: #e6eef8;
+  --muted: #9fb0d6;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Noto Sans", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #071129 0%, #081024 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.06);
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.controls input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: transparent;
+  color: var(--text);
+}
+
+.controls button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+main {
+  padding: 20px;
+  max-width: 980px;
+  margin: 16px auto;
+}
+
+.summary {
+  background: rgba(255,255,255,0.02);
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+}
+
+.card .icon {
+  font-size: 2rem;
+  margin: 6px 0;
+}
+
+.card .day {
+  font-weight: 600;
+}
+
+.card .temp {
+  font-size: 1.1rem;
+  margin: 4px 0;
+}
+
+.card .small {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (max-width:520px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .controls input {
+    width: 100%;
+  }
+}

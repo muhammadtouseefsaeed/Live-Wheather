@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Touseef Malik - Weather App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="profile">
+      <img src="https://i.postimg.cc/XNmT4VNg/558094692-787841107555093-6027457938418604754-n.jpg" alt="Touseef Malik" class="avatar" />
+      <div>
+        <h1>Touseef Malik</h1>
+        <p class="subtitle">Live Weather Forecast</p>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="locBtn">Get My Location</button>
+      <input id="cityInput" placeholder="Enter city name (e.g. Karachi)" />
+      <button id="cityBtn">Search</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary" id="summary">
+      <h2 id="locationName">Location: —</h2>
+      <p id="currentShort">Weather not loaded yet. Click “Get My Location” or search a city.</p>
+    </section>
+
+    <section class="forecast" id="forecast">
+      <!-- Weather cards will appear here -->
+    </section>
+
+    <footer class="footer">
+      <small>
+        Designed by Touseef Malik</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
